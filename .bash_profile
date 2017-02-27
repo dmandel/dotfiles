@@ -1,5 +1,11 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+# export PATH="$HOME/bin:$PATH";
+export PATH=/usr/local/bin:$PATH;
+
+
+#M2_HOME=/usr/local/apache-maven/apache-maven-3.0.4
+export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec
+
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -46,3 +52,35 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+export NVM_DIR=~/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#source $(brew --prefix nvm)/nvm.sh
+nvm alias default 4.7.0
+
+eval "$(chef shell-init bash)"
+export CHEF_USER=mandd003
+
+# JMeter
+export JMETER_HOME=/usr/local/bin/jmeter
+
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/dmandel/SDK/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/dmandel/SDK/google-cloud-sdk/completion.bash.inc'
+
+eval "$(rbenv init -)"
+
+# RubyGEMS
+export GEM_ROOT=/Users/dmandel/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0
+export GEM_PATH=/Users/dmandel/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0:/Users/dmandel/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0:/Users/dmandel/.chefdk/gem/ruby/2.1.0:/opt/chefdk/embedded/lib/ruby/gems/2.1.0
+export GEM_HOME=/Users/dmandel/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0
+
+export VAULT_ADDR=https://devkeys.disney.network
+
+# Python
+PYTHONPATH="/lib/python2.7/site-packages/:/usr/local/Cellar/python/2.7.12/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:/Library/Python/2.7/site-packages"
+export PYTHONPATH
+

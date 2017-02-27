@@ -134,11 +134,7 @@
 
 	# Detect copies as well as renames
 	renames = copies
-
-[diff "bin"]
-
-	# Use `hexdump` to diff binary files
-	textconv = hexdump -v -C
+	tool = bc3
 
 [help]
 
@@ -149,6 +145,7 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = bc3
 
 [push]
 
@@ -180,3 +177,8 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+	name = dmandel
+[mergetool]
+	bc3 = trustExitCode
